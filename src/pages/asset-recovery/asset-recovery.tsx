@@ -2,9 +2,9 @@ import React from "react";
 
 import { useIntl } from "react-intl";
 
-import recomandation_img from "@/public/images/nov23-recommendations.png";
+import recomandation_img from "../../../public/images/nov23-recommendations.png";
 
-export default function AssetRecovery() {
+export const AssetRecovery = () => {
   const { formatMessage } = useIntl();
 
   return (
@@ -45,4 +45,4 @@ export default function AssetRecovery() {
       </div>
     </main>
   );
-}
+};

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 
+import { NavLink } from "react-router-dom";
+
 import { PrimaryIcon } from "../../shared/icon/primary-icon";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { HeaderSearchBtn } from "../../shared/buttons";
@@ -65,13 +67,13 @@ export const Navigation = () => {
               <div className="flex flex-col gap-4">
                 <Logotype />
                 {data.map((link) => (
-                  <a
-                    href={link.url}
+                  <NavLink
+                    to={link.url}
                     key={link.id}
                     className="w-full capitalise text-[20px] text-[#13181b] border-b-2 border-[#4f9eb2] border-b-[#13181b] py-[8px]"
                   >
                     {link.name}
-                  </a>
+                  </NavLink>
                 ))}
                 <div className="md:w-[80%] w-[90%] flex flex-col items-center gap-4 mx-auto">
                   <HeaderSearchBtn />
@@ -84,13 +86,13 @@ export const Navigation = () => {
       </nav>
       <nav className="text-ii_aght hidden justify-center items-center gap-2 text-[20px] lg:flex">
         {data.map((link) => (
-          <a
-            href={link.url}
+          <NavLink
+            to={link.url}
             key={link.id}
             className="h-[58px] text-[#13181b] text-[20px] capitalise text-ii_light font-[inherit] pt-[8px] xl:px-[24px] px-[18px] pb-[1.25rem] mx-[8px] hover:border-b-[2px] border-[#df3327] hover:text-ii_blue hover:duration-300"
           >
             {link.name}
-          </a>
+          </NavLink>
         ))}
       </nav>
     </>

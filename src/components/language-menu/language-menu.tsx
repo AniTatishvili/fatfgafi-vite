@@ -34,7 +34,7 @@ export const LanguageMenu = () => {
           aria-haspopup="true"
           onClick={toggleMenu}
         >
-          <span>nativeName</span>
+          <span>{i18n.resolvedLanguage && i18n.resolvedLanguage}</span>
           <svg
             className="-mr-1 h-5 w-5 text-gray-400"
             viewBox="0 0 20 20"

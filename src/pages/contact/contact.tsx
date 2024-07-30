@@ -2,7 +2,7 @@ import React from "react";
 
 import { useTranslation } from "react-i18next";
 
-export default function Contact() {
+export const Contact = () => {
   const { t } = useTranslation();
 
   return (
@@ -77,4 +77,4 @@ export default function Contact() {
       </div>
     </main>
   );
-}
+};

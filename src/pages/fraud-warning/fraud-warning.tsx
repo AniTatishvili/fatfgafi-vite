@@ -2,7 +2,7 @@ import React from "react";
 
 import { useTranslation } from "react-i18next";
 
-export default function FraudWarning() {
+export const FraudWarning = () => {
   const { t } = useTranslation();
 
   return (
@@ -30,4 +30,4 @@ export default function FraudWarning() {
       </div>
     </main>
   );
-}
+};

@@ -1,34 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Redirect } from "./Redirect";
-
 import { Home } from "../../pages/home";
-// import { Contact } from "../../pages/contact";
+import { AssetRecovery } from "../../pages/asset-recovery";
+import { FraudWarning } from "../../pages/fraud-warning";
+import { Contact } from "../../pages/contact/contact";
+import { Redirect } from "./Redirect";
+import { Header } from "../../components/header";
+import { Footer } from "../../components/footer";
 
-// 404
-// import NotFoundPage from "../../pages/NotFoundPage";
-
-// interface RouterConfigProps {}
-
-// routing.
 export function RouterConfig() {
   return (
     <Router>
+      <Header />
       <Routes>
-        <Route>
-          <Route path="/" element={<Home />} />
-          {/* Handling 404 */}
-          {/* <Route path="*" element={<NotFoundPage />} /> */}
-
-          {/* Redirect */}
-          <Route element={<Redirect />}>
-            {/* <Route path="contact" element={<Contact />} /> */}
-          </Route>
-
-          {/* Uncomment and use if needed */}
-          {/* <Route path="email-confirmation" element={<EmailConfirmationPage />} /> */}
+        <Route path="/" element={<Home />} />
+        <Route element={<Redirect />}>
+          <Route path="asset-recovery" element={<AssetRecovery />} />
+          <Route path="fraud-warning" element={<FraudWarning />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
+        {/* Add a 404 Not Found route if needed */}
+        {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>
+      <Footer />
     </Router>
   );
 }

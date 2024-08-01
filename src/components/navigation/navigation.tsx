@@ -39,9 +39,7 @@ export const Navigation = () => {
     },
   ];
 
-  const handleToggle = () => {
-    setIsOpen((prev) => !prev);
-  };
+  const handleToggle = () => setIsOpen((prev) => !prev);
 
   return (
     <>
@@ -49,14 +47,8 @@ export const Navigation = () => {
         className="flex items-center overflow-hidden lg:hidden"
         onClick={handleToggle}
       >
-        <div
-          className={`cursor-pointer z-[101] ${
-            isOpen ? "fixed right-[20px]" : "relative"
-          }`}
-        >
-          {isOpen ? (
-            <PrimaryIcon icon={FaXmark} color="#df3327" size="30" />
-          ) : (
+        <div className={`mcursor-pointer relative z-[101] `}>
+          {isOpen ? null : (
             <PrimaryIcon icon={FaBars} color="#13181b" size="30" />
           )}
         </div>
@@ -68,7 +60,14 @@ export const Navigation = () => {
               }`}
             >
               <div className="flex flex-col gap-4">
-                <Logotype />
+                <div className="flex justify-between items-center">
+                  <Logotype />
+                  <div className={`mcursor-pointer z-[101] fixed right-[20px]`}>
+                    {isOpen ? (
+                      <PrimaryIcon icon={FaXmark} color="#df3327" size="30" />
+                    ) : null}
+                  </div>
+                </div>
                 {data.map((link) => (
                   <NavLink
                     to={link.url}

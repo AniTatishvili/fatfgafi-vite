@@ -38,11 +38,16 @@ export const Contact = () => {
             </h4>
             <p>{t("CONTACT_PARAGRAPH3")}</p>
             <p>{t("CONTACT_PARAGRAPH4")}</p>
-            <p>{t("CONTACT_PARAGRAPH4")}</p>
-            <p>{t("CONTACT_PARAGRAPH5")}</p>
+            <p>75775 Paris Cedex 16 FRANCE</p>
             <p>Tel: + 33 1 45 24 90 90</p>
-            <p>{t("CONTACT_PARAGRAPH8")}</p>
-            <p>Contact@fatf-gafi.org</p>
+            <p className="font-[600]">{t("CONTACT_PARAGRAPH5")}</p>
+            <p>UK & Canada: + 44 7700 314529</p>
+            <p>Europe: +372 8278 7546</p>
+            <p className="text-[#267589] underline decoration-2 hover:decoration-[#df3327]">
+              <NavLink to="mailto:support@fatfgafi.net">
+                support@fatfgafi.net
+              </NavLink>
+            </p>
           </div>
         </div>
         <div className="flex flex-col gap-3 text-[#333] text-[18px] font-[400] font-[Graphik,Calibri,sans-serif]">

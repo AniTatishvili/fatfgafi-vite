@@ -138,27 +138,39 @@ export const Footer = () => {
         <div className="lg:w-[25%] w-[100%] flex flex-col lg:items-end items-center">
           <ul className="flex flex-row justify-center items-center gap-4 py-[20px]">
             <li>
-              <NavLink to="/" className="text-[27px]">
+              <NavLink to="https://x.com/FATFNews" className="text-[27px]">
                 <FaTwitter />
               </NavLink>
             </li>
             <li>
-              <NavLink to="/" className="text-[27px]">
+              <NavLink
+                to="https://www.facebook.com/theFATF"
+                className="text-[27px]"
+              >
                 <FaFacebookF />
               </NavLink>
             </li>
             <li>
-              <NavLink to="/" className="text-[27px]">
+              <NavLink
+                to="https://www.instagram.com/fatf_gafi/?hl=en"
+                className="text-[27px]"
+              >
                 <PiInstagramLogoFill />
               </NavLink>
             </li>
             <li>
-              <NavLink to="/" className="text-[27px]">
+              <NavLink
+                to="https://www.linkedin.com/company/financial-action-task-force-fatf-/"
+                className="text-[27px]"
+              >
                 <FaLinkedinIn />
               </NavLink>
             </li>
             <li>
-              <NavLink to="/" className="text-[27px]">
+              <NavLink
+                to="https://www.youtube.com/@TheFATF"
+                className="text-[27px]"
+              >
                 <FaYoutube />
               </NavLink>
             </li>

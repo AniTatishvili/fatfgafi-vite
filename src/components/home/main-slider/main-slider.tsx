@@ -109,21 +109,23 @@ export const MainSlider = () => {
       >
         {silderItemsArr.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="w-full md:h-[540px] h-[260px] relative z-10">
+            <div className="w-full md:h-[540px] h-[300px] relative z-10">
               <img
                 src={item.bannerSource}
                 className="w-full h-[100%] object-cover"
                 alt="slider"
               />
-              <div className="w-[70%] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-20">
-                <h2 className="text-[#fff] text-[2.25em] my-[1rem]">
+              <div className="md:w-[70%] w-[90%] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-20">
+                <h2 className="text-[#fff] md:text-[2.25em] sm:text-[1em] text-[0.75em] md:my-[1rem] my-2 loading-2">
                   {item.title}
                 </h2>
-                <p className="text-[#fff] text-[24px] py-[1rem]">{item.desc}</p>
+                <p className="text-[#fff] md:text-[24px] sm:text-[18px] text-[16px] md:py-[1rem] py-1 loading-1">
+                  {item.desc}
+                </p>
                 {item.link && (
                   <a
                     href="#"
-                    className="inline-flex items-center gap-2 text-[#fff] text-[18px] font-[Graphik,Calibri,sans-serif] px-[24px] py-[8px] mt-[1rem] mb-[0.5rem] bg-[#267589] rounded-[10rem]"
+                    className="inline-flex items-center gap-2 text-[#fff] md:text-[18px] sm:text-[16px] text-[12px] font-[Graphik,Calibri,sans-serif] px-[24px] py-[8px] mt-[1rem] mb-[0.5rem] bg-[#267589] rounded-[10rem]"
                   >
                     {item.link}
                   </a>

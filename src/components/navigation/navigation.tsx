@@ -21,6 +21,7 @@ export const Navigation = () => {
   React.useEffect(() => {
     if (isOpen) {
       setIsOpen(false);
+      console.log(isOpen);
     }
   }, [location]);
 
@@ -38,28 +39,25 @@ export const Navigation = () => {
     },
   ];
 
+  const handleToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <>
-      <nav className="flex items-center overflow-hidden lg:hidden">
+      <nav
+        className="flex items-center overflow-hidden lg:hidden"
+        onClick={handleToggle}
+      >
         <div
           className={`cursor-pointer z-[101] ${
-            isOpen ? "fixed right-[20px]" : "static"
+            isOpen ? "fixed right-[20px]" : "relative"
           }`}
         >
           {isOpen ? (
-            <PrimaryIcon
-              icon={FaXmark}
-              color="#df3327"
-              size="30"
-              onClick={() => setIsOpen(false)}
-            />
+            <PrimaryIcon icon={FaXmark} color="#df3327" size="30" />
           ) : (
-            <PrimaryIcon
-              icon={FaBars}
-              color="#13181b"
-              size="30"
-              onClick={() => setIsOpen(true)}
-            />
+            <PrimaryIcon icon={FaBars} color="#13181b" size="30" />
           )}
         </div>
         {isMounted &&

@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
-
-import { NavLink } from "react-router-dom";
-
+import { NavLink, useLocation } from "react-router-dom";
 import { PrimaryIcon } from "../../shared/icon/primary-icon";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { HeaderSearchBtn } from "../../shared/buttons";
@@ -12,12 +10,19 @@ import { LanguageMenu } from "../../components/language-menu";
 
 export const Navigation = () => {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [isMounted, setIsMounted] = React.useState(false);
+  const location = useLocation();
 
-  useEffect(() => {
+  React.useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  }, [location]);
 
   const data = [
     { id: 1, url: "/", name: t("HOME") },

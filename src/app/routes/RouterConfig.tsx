@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import { Redirect } from "./Redirect";
 
-import { Header } from "../../components/header";
-import { Footer } from "../../components/footer";
+import { Loader } from "../../shared/loader";
 
 import { Home } from "../../pages/home";
 
@@ -44,9 +44,24 @@ import FrequentlyAskedQuestions from "../../pages/frequently-asked-questions/fre
 import Countries from "../../pages/countries/countries";
 
 export function RouterConfig() {
+  const [loading, setLoading] = React.useState(false);
+  const location = useLocation();
+
+  React.useEffect(() => {
+    const handleStart = () => setLoading(true);
+    const handleComplete = () => setLoading(false);
+
+    handleStart();
+    const timer = setTimeout(handleComplete, 1500);
+
+    window.scrollTo(0, 0);
+
+    return () => clearTimeout(timer);
+  }, [location]);
+
   return (
-    <Router>
-      <Header />
+    <>
+      {loading && <Loader />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route element={<Redirect />}>
@@ -154,7 +169,6 @@ export function RouterConfig() {
         {/* Add a 404 Not Found route if needed */}
         {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>
-      <Footer />
-    </Router>
+    </>
   );
 }

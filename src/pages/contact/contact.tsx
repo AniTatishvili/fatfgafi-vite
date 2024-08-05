@@ -39,7 +39,6 @@ export const Contact = () => {
             <p>{t("CONTACT_PARAGRAPH3")}</p>
             <p>{t("CONTACT_PARAGRAPH4")}</p>
             <p>75775 Paris Cedex 16 FRANCE</p>
-            <p>Tel: + 33 1 45 24 90 90</p>
             <p className="font-[600]">{t("CONTACT_PARAGRAPH5")}</p>
             <p>UK & Canada: + 44 7700 314529</p>
             <p>Europe: +372 8278 7546</p>

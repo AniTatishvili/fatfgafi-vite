@@ -40,7 +40,7 @@ export const Contact = () => {
             <p>{t("CONTACT_PARAGRAPH4")}</p>
             <p>75775 Paris Cedex 16 FRANCE</p>
             <p className="font-[600]">{t("CONTACT_PARAGRAPH5")}</p>
-            <p>UK & Canada: + 44 7700 314529</p>
+            <p>Canada: +1(647) 361 4895</p>
             <p>Europe: +372 8278 7546</p>
             <p className="text-[#267589] underline decoration-2 hover:decoration-[#df3327]">
               <NavLink to="mailto:support@fatfgafi.net">

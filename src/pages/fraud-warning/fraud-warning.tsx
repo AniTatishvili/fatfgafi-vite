@@ -13,17 +13,8 @@ export const FraudWarning = () => {
           <p>{t("FRAUD_WARNING_PARAGRAPH1")}</p>
           <p>{t("FRAUD_WARNING_PARAGRAPH2")}</p>
           <p>{t("FRAUD_WARNING_PARAGRAPH3")}</p>
-          <p>
-            <strong>{t("FRAUD_WARNING_PARAGRAPH4")}</strong>
-          </p>
-          <p>
-            <strong>{t("FRAUD_WARNING_PARAGRAPH5")}</strong>
-          </p>
-          <p>
-            <strong>{t("FRAUD_WARNING_PARAGRAPH6")}</strong>
-          </p>
-          <p>{t("FRAUD_WARNING_PARAGRAPH7")}</p>
-          <p>{t("FRAUD_WARNING_PARAGRAPH8")}</p>
+          <p>{t("FRAUD_WARNING_PARAGRAPH4")}</p>
+          <p>{t("FRAUD_WARNING_PARAGRAPH5")}</p>
         </div>
       </div>
     </main>
